@@ -1,7 +1,9 @@
-from prometheus_client import start_http_server, Gauge
+from prometheus_client import start_http_server, Gauge, Counter
 
 ping_metric = Gauge("ping_status", "Ping status", ["host"])
-sla_metric = Gauge("sla_percentage", "SLA %", ["service"])
+bgp_metric = Gauge("bgp_status", "BGP peer status", ["host"])
+interface_metric = Gauge("interface_oper_status", "Interface status", ["host"])
+anomaly_metric = Counter("anomaly_events", "Detected anomalies")
 
 def start():
     start_http_server(9100)
