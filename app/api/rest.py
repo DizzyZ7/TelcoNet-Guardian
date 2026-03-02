@@ -1,8 +1,11 @@
-# app/api/rest.py
 from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/health")
-async def health():
-    return {"status": "ok"}
+@app.get("/status")
+async def status():
+    return {"guardian": "running"}
+
+@app.get("/topology")
+async def topology():
+    return {"file": "topology.png"}
