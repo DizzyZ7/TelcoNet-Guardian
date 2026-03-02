@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telconet-guardian
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: guardian
+  template:
+    metadata:
+      labels:
+        app: guardian
+    spec:
+      containers:
+      - name: guardian
+        image: telconet-guardian:latest
+        ports:
+        - containerPort: 8000
+        - containerPort: 9100
