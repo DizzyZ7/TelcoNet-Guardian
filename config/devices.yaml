@@ -1,0 +1,7 @@
+devices:
+  - name: router1
+    ip: 8.8.8.8
+
+telegram:
+  token: "YOUR_BOT_TOKEN"
+  chat_id: "YOUR_CHAT_ID"
