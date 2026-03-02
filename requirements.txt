@@ -3,3 +3,6 @@ uvicorn
 aiohttp
 prometheus_client
 pyyaml
+pysnmp
+networkx
+matplotlib
