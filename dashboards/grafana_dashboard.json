@@ -1,0 +1,23 @@
+{
+  "title": "TelcoNet Guardian",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Ping Status",
+      "targets": [
+        {
+          "expr": "ping_status"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "title": "BGP Status",
+      "targets": [
+        {
+          "expr": "bgp_status"
+        }
+      ]
+    }
+  ]
+}
